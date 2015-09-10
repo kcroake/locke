@@ -6,6 +6,15 @@
  * Kroc Camen, and the H5BP dev community and team.
  */
 
+ /* ==========================================================================
+   Font Imports
+   ========================================================================== */
+
+   @import 'fonts.scss';
+   @import 'variable.scss';
+
+   *{outline: 1px solid rgba(0,0,0,.25);}
+
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
@@ -94,12 +103,45 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+.container{
+    box-sizing: border-box;
+    max-width:1024px;
+    width: 100%; 
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+header{
+    border-top: 10px solid $green;
+    nav{
+        float: right;
+        ul{
+            display: block;
+            font-size: 0;
+            li{
+                display: inline-block;
+                font: 400 16px/18px $libre;
+                text-transform: lowercase;
+                a{
+                    text-decoration:none;
+                    color: $gray;
+                    padding: 30px 30px;
+                    display: block;
+                    &:hover{
+                        color: $green;
+                    }
+                }
+            }
+        }
+    }
+}
 
 
+//Sections
 
-
-
-
+#home-banner{
+    height: 660px;
+}
 
 
 

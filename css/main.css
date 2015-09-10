@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic,700);
 /*! HTML5 Boilerplate v5.2.0 | MIT License | https://html5boilerplate.com/ */
 /*
  * What follows is the result of much research on cross-browser styling.
@@ -5,8 +6,51 @@
  * Kroc Camen, and the H5BP dev community and team.
  */
 /* ==========================================================================
+   Font Imports
+   ========================================================================== */
+@font-face {
+  font-family: 'Amble';
+  src: url('../fonts/amble/reg/Amble-Regular-webfont.eot');
+  src: url('../fonts/amble/reg/Amble-Regular-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/amble/reg/Amble-Regular-webfont.woff') format('woff'), url('../fonts/amble/reg/Amble-Regular-webfont.ttf') format('truetype'), url('../fonts/amble/reg/Amble-Regular-webfont.svg#ambleregular') format('svg');
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Amble';
+  src: url('../fonts/amble/light/Amble-Light-webfont.eot');
+  src: url('../fonts/amble/light/Amble-Light-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/amble/light/Amble-Light-webfont.woff') format('woff'), url('../fonts/amble/light/Amble-Light-webfont.ttf') format('truetype'), url('../fonts/amble/light/Amble-Light-webfont.svg#amblelight') format('svg');
+  font-weight: light;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Amble';
+  src: url('../fonts/amble/lightitalic/Amble-LightItalic-webfont.eot');
+  src: url('../fonts/amble/lightitalic/Amble-LightItalic-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/amble/lightitalic../fonts/amble/reg//Amble-LightItalic-webfont.woff') format('woff'), url('../fonts/amble/lightitalic/Amble-LightItalic-webfont.ttf') format('truetype'), url('../fonts/amble/lightitalic/Amble-LightItalic-webfont.svg#amblelight_italic') format('svg');
+  font-weight: 300;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Amble';
+  src: url('../fonts/amble/bold/Amble-Bold-webfont.eot');
+  src: url('../fonts/amble/bold/Amble-Bold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/amble/bold/Amble-Bold-webfont.woff') format('woff'), url('../fonts/amble/bold/Amble-Bold-webfont.ttf') format('truetype'), url('../fonts/amble/bold/Amble-Bold-webfont.svg#amblebold') format('svg');
+  font-weight: 700;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Amble';
+  src: url('../fonts/amble/bolditalic/Amble-BoldItalic-webfont.eot');
+  src: url('../fonts/amble/bolditalic/Amble-BoldItalic-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/amble/bolditalic/Amble-BoldItalic-webfont.woff') format('woff'), url('../fonts/amble/bolditalic/Amble-BoldItalic-webfont.ttf') format('truetype'), url('../fonts/amble/bolditalic/Amble-BoldItalic-webfont.svg#amblebold_italic') format('svg');
+  font-weight: 700;
+  font-style: italic; }
+
+/* line 16, C:/Users/kevin/Documents/Sites/locke/css/main.scss */
+* {
+  outline: 1px solid rgba(0, 0, 0, 0.25); }
+
+/* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
+/* line 22, C:/Users/kevin/Documents/Sites/locke/css/main.scss */
 html {
   color: #222;
   font-size: 1em;
@@ -19,10 +63,15 @@ html {
  * These selection rule sets have to be separate.
  * Customize the background color to match your design.
  */
+/* line 36, C:/Users/kevin/Documents/Sites/locke/css/main.scss */
 ::-moz-selection {
   background: #b3d4fc;
   text-shadow: none; }
 
+/* line 41, C:/Users/kevin/Documents/Sites/locke/css/main.scss */
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none; }
 ::selection {
   background: #b3d4fc;
   text-shadow: none; }
@@ -30,6 +79,7 @@ html {
 /*
  * A better looking default horizontal rule
  */
+/* line 50, C:/Users/kevin/Documents/Sites/locke/css/main.scss */
 hr {
   display: block;
   height: 1px;
@@ -43,17 +93,14 @@ hr {
  * images, videos and the bottom of their containers:
  * https://github.com/h5bp/html5-boilerplate/issues/440
  */
-audio,
-canvas,
-iframe,
-img,
-svg,
-video {
+/* line 70, C:/Users/kevin/Documents/Sites/locke/css/main.scss */
+audio, canvas, iframe, img, svg, video {
   vertical-align: middle; }
 
 /*
  * Remove default fieldset styles.
  */
+/* line 78, C:/Users/kevin/Documents/Sites/locke/css/main.scss */
 fieldset {
   border: 0;
   margin: 0;
@@ -62,12 +109,14 @@ fieldset {
 /*
  * Allow only vertical resizing of textareas.
  */
+/* line 88, C:/Users/kevin/Documents/Sites/locke/css/main.scss */
 textarea {
   resize: vertical; }
 
 /* ==========================================================================
    Browser Upgrade Prompt
    ========================================================================== */
+/* line 96, C:/Users/kevin/Documents/Sites/locke/css/main.scss */
 .browserupgrade {
   margin: 0.2em 0;
   background: #ccc;
@@ -77,12 +126,50 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+/* line 106, C:/Users/kevin/Documents/Sites/locke/css/main.scss */
+.container {
+  box-sizing: border-box;
+  max-width: 1024px;
+  width: 100%;
+  padding: 0 20px;
+  margin: 0 auto; }
+
+/* line 114, C:/Users/kevin/Documents/Sites/locke/css/main.scss */
+header {
+  border-top: 10px solid #9FB664; }
+  /* line 116, C:/Users/kevin/Documents/Sites/locke/css/main.scss */
+  header nav {
+    float: right; }
+    /* line 118, C:/Users/kevin/Documents/Sites/locke/css/main.scss */
+    header nav ul {
+      display: block;
+      font-size: 0; }
+      /* line 121, C:/Users/kevin/Documents/Sites/locke/css/main.scss */
+      header nav ul li {
+        display: inline-block;
+        font: 400 16px/18px 'Libre Baskerville', Georgia, Times, 'Times New Roman', serif;
+        text-transform: lowercase; }
+        /* line 125, C:/Users/kevin/Documents/Sites/locke/css/main.scss */
+        header nav ul li a {
+          text-decoration: none;
+          color: #737373;
+          padding: 30px 30px;
+          display: block; }
+          /* line 130, C:/Users/kevin/Documents/Sites/locke/css/main.scss */
+          header nav ul li a:hover {
+            color: #9FB664; }
+
+/* line 142, C:/Users/kevin/Documents/Sites/locke/css/main.scss */
+#home-banner {
+  height: 660px; }
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
 /*
  * Hide visually and from screen readers:
  */
+/* line 164, C:/Users/kevin/Documents/Sites/locke/css/main.scss */
 .hidden {
   display: none !important; }
 
@@ -90,6 +177,7 @@ textarea {
  * Hide only visually, but have it available for screen readers:
  * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
  */
+/* line 173, C:/Users/kevin/Documents/Sites/locke/css/main.scss */
 .visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -105,8 +193,8 @@ textarea {
  * to be focusable when navigated to via the keyboard:
  * https://www.drupal.org/node/897638
  */
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
+/* line 191, C:/Users/kevin/Documents/Sites/locke/css/main.scss */
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
   clip: auto;
   height: auto;
   margin: 0;
@@ -117,6 +205,7 @@ textarea {
 /*
  * Hide visually and from screen readers, but maintain layout
  */
+/* line 204, C:/Users/kevin/Documents/Sites/locke/css/main.scss */
 .invisible {
   visibility: hidden; }
 
@@ -131,13 +220,14 @@ textarea {
  * 2. The use of `table` rather than `block` is only necessary if using
  *    `:before` to contain the top-margins of child elements.
  */
-.clearfix:before,
-.clearfix:after {
+/* line 221, C:/Users/kevin/Documents/Sites/locke/css/main.scss */
+.clearfix:before, .clearfix:after {
   content: " ";
   /* 1 */
-  display: table;
+  display: table
   /* 2 */ }
 
+/* line 226, C:/Users/kevin/Documents/Sites/locke/css/main.scss */
 .clearfix:after {
   clear: both; }
 
@@ -146,69 +236,69 @@ textarea {
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */ }
-@media print, (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
-  /* Style adjustments for high resolution devices */ }
 /* ==========================================================================
    Print styles.
    Inlined to avoid the additional HTTP request:
    http://www.phpied.com/delay-loading-your-print-css/
    ========================================================================== */
 @media print {
-  *,
-  *:before,
-  *:after {
+  /* line 256, C:/Users/kevin/Documents/Sites/locke/css/main.scss */
+  *, *:before, *:after {
     background: transparent !important;
     color: #000 !important;
     /* Black prints faster:
-       http://www.sanbeiji.com/archives/953 */
+                                   http://www.sanbeiji.com/archives/953 */
     box-shadow: none !important;
     text-shadow: none !important; }
 
-  a,
-  a:visited {
+  /* line 265, C:/Users/kevin/Documents/Sites/locke/css/main.scss */
+  a, a:visited {
     text-decoration: underline; }
 
+  /* line 269, C:/Users/kevin/Documents/Sites/locke/css/main.scss */
   a[href]:after {
     content: " (" attr(href) ")"; }
 
+  /* line 273, C:/Users/kevin/Documents/Sites/locke/css/main.scss */
   abbr[title]:after {
     content: " (" attr(title) ")"; }
 
   /*
-   * Don't show links that are fragment identifiers,
-   * or use the `javascript:` pseudo protocol
-   */
-  a[href^="#"]:after,
-  a[href^="javascript:"]:after {
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+  /* line 283, C:/Users/kevin/Documents/Sites/locke/css/main.scss */
+  a[href^="#"]:after, a[href^="javascript:"]:after {
     content: ""; }
 
-  pre,
-  blockquote {
+  /* line 288, C:/Users/kevin/Documents/Sites/locke/css/main.scss */
+  pre, blockquote {
     border: 1px solid #999;
     page-break-inside: avoid; }
 
   /*
-   * Printing Tables:
-   * http://css-discuss.incutio.com/wiki/Printing_Tables
-   */
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+  /* line 298, C:/Users/kevin/Documents/Sites/locke/css/main.scss */
   thead {
     display: table-header-group; }
 
-  tr,
-  img {
+  /* line 303, C:/Users/kevin/Documents/Sites/locke/css/main.scss */
+  tr, img {
     page-break-inside: avoid; }
 
+  /* line 307, C:/Users/kevin/Documents/Sites/locke/css/main.scss */
   img {
     max-width: 100% !important; }
 
-  p,
-  h2,
-  h3 {
+  /* line 313, C:/Users/kevin/Documents/Sites/locke/css/main.scss */
+  p, h2, h3 {
     orphans: 3;
     widows: 3; }
 
-  h2,
-  h3 {
-    page-break-after: avoid; } }
+  /* line 319, C:/Users/kevin/Documents/Sites/locke/css/main.scss */
+  h2, h3 {
+    page-break-after: avoid; }
+ }
+/*# sourceMappingURL=main.css.map */

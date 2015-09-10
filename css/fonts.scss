@@ -1,0 +1,64 @@
+// Amble
+
+@font-face {
+    font-family: 'Amble';
+    src: url('../fonts/amble/reg/Amble-Regular-webfont.eot');
+    src: url('../fonts/amble/reg/Amble-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/amble/reg/Amble-Regular-webfont.woff') format('woff'),
+         url('../fonts/amble/reg/Amble-Regular-webfont.ttf') format('truetype'),
+         url('../fonts/amble/reg/Amble-Regular-webfont.svg#ambleregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Amble';
+    src: url('../fonts/amble/light/Amble-Light-webfont.eot');
+    src: url('../fonts/amble/light/Amble-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/amble/light/Amble-Light-webfont.woff') format('woff'),
+         url('../fonts/amble/light/Amble-Light-webfont.ttf') format('truetype'),
+         url('../fonts/amble/light/Amble-Light-webfont.svg#amblelight') format('svg');
+    font-weight: light;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Amble';
+    src: url('../fonts/amble/lightitalic/Amble-LightItalic-webfont.eot');
+    src: url('../fonts/amble/lightitalic/Amble-LightItalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/amble/lightitalic../fonts/amble/reg//Amble-LightItalic-webfont.woff') format('woff'),
+         url('../fonts/amble/lightitalic/Amble-LightItalic-webfont.ttf') format('truetype'),
+         url('../fonts/amble/lightitalic/Amble-LightItalic-webfont.svg#amblelight_italic') format('svg');
+    font-weight: 300;
+    font-style: italic;
+
+}
+
+@font-face {
+    font-family: 'Amble';
+    src: url('../fonts/amble/bold/Amble-Bold-webfont.eot');
+    src: url('../fonts/amble/bold/Amble-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/amble/bold/Amble-Bold-webfont.woff') format('woff'),
+         url('../fonts/amble/bold/Amble-Bold-webfont.ttf') format('truetype'),
+         url('../fonts/amble/bold/Amble-Bold-webfont.svg#amblebold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'Amble';
+    src: url('../fonts/amble/bolditalic/Amble-BoldItalic-webfont.eot');
+    src: url('../fonts/amble/bolditalic/Amble-BoldItalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/amble/bolditalic/Amble-BoldItalic-webfont.woff') format('woff'),
+         url('../fonts/amble/bolditalic/Amble-BoldItalic-webfont.ttf') format('truetype'),
+         url('../fonts/amble/bolditalic/Amble-BoldItalic-webfont.svg#amblebold_italic') format('svg');
+    font-weight: 700;
+    font-style: italic;
+
+}
+
+// Libre Baskerville
+
+@import url(https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic,700);
