@@ -1,4 +1,3 @@
-@import url(https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic,700);
 /*! HTML5 Boilerplate v5.2.0 | MIT License | https://html5boilerplate.com/ */
 /*
  * What follows is the result of much research on cross-browser styling.
@@ -6,51 +5,42 @@
  * Kroc Camen, and the H5BP dev community and team.
  */
 /* ==========================================================================
-   Font Imports
-   ========================================================================== */
+  Font Imports
+  ========================================================================== */
+@import url(https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic,700);
 @font-face {
   font-family: 'Amble';
-  src: url('../fonts/amble/reg/Amble-Regular-webfont.eot');
-  src: url('../fonts/amble/reg/Amble-Regular-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/amble/reg/Amble-Regular-webfont.woff') format('woff'), url('../fonts/amble/reg/Amble-Regular-webfont.ttf') format('truetype'), url('../fonts/amble/reg/Amble-Regular-webfont.svg#ambleregular') format('svg');
+  src: url("../fonts/amble/reg/Amble-Regular-webfont.eot");
+  src: url("../fonts/amble/reg/Amble-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/amble/reg/Amble-Regular-webfont.woff") format("woff"), url("../fonts/amble/reg/Amble-Regular-webfont.ttf") format("truetype"), url("../fonts/amble/reg/Amble-Regular-webfont.svg#ambleregular") format("svg");
   font-weight: normal;
   font-style: normal; }
-
 @font-face {
   font-family: 'Amble';
-  src: url('../fonts/amble/light/Amble-Light-webfont.eot');
-  src: url('../fonts/amble/light/Amble-Light-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/amble/light/Amble-Light-webfont.woff') format('woff'), url('../fonts/amble/light/Amble-Light-webfont.ttf') format('truetype'), url('../fonts/amble/light/Amble-Light-webfont.svg#amblelight') format('svg');
+  src: url("../fonts/amble/light/Amble-Light-webfont.eot");
+  src: url("../fonts/amble/light/Amble-Light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/amble/light/Amble-Light-webfont.woff") format("woff"), url("../fonts/amble/light/Amble-Light-webfont.ttf") format("truetype"), url("../fonts/amble/light/Amble-Light-webfont.svg#amblelight") format("svg");
   font-weight: light;
   font-style: normal; }
-
 @font-face {
   font-family: 'Amble';
-  src: url('../fonts/amble/lightitalic/Amble-LightItalic-webfont.eot');
-  src: url('../fonts/amble/lightitalic/Amble-LightItalic-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/amble/lightitalic../fonts/amble/reg//Amble-LightItalic-webfont.woff') format('woff'), url('../fonts/amble/lightitalic/Amble-LightItalic-webfont.ttf') format('truetype'), url('../fonts/amble/lightitalic/Amble-LightItalic-webfont.svg#amblelight_italic') format('svg');
+  src: url("../fonts/amble/lightitalic/Amble-LightItalic-webfont.eot");
+  src: url("../fonts/amble/lightitalic/Amble-LightItalic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/amble/lightitalic../fonts/amble/reg//Amble-LightItalic-webfont.woff") format("woff"), url("../fonts/amble/lightitalic/Amble-LightItalic-webfont.ttf") format("truetype"), url("../fonts/amble/lightitalic/Amble-LightItalic-webfont.svg#amblelight_italic") format("svg");
   font-weight: 300;
   font-style: italic; }
-
 @font-face {
   font-family: 'Amble';
-  src: url('../fonts/amble/bold/Amble-Bold-webfont.eot');
-  src: url('../fonts/amble/bold/Amble-Bold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/amble/bold/Amble-Bold-webfont.woff') format('woff'), url('../fonts/amble/bold/Amble-Bold-webfont.ttf') format('truetype'), url('../fonts/amble/bold/Amble-Bold-webfont.svg#amblebold') format('svg');
+  src: url("../fonts/amble/bold/Amble-Bold-webfont.eot");
+  src: url("../fonts/amble/bold/Amble-Bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/amble/bold/Amble-Bold-webfont.woff") format("woff"), url("../fonts/amble/bold/Amble-Bold-webfont.ttf") format("truetype"), url("../fonts/amble/bold/Amble-Bold-webfont.svg#amblebold") format("svg");
   font-weight: 700;
   font-style: normal; }
-
 @font-face {
   font-family: 'Amble';
-  src: url('../fonts/amble/bolditalic/Amble-BoldItalic-webfont.eot');
-  src: url('../fonts/amble/bolditalic/Amble-BoldItalic-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/amble/bolditalic/Amble-BoldItalic-webfont.woff') format('woff'), url('../fonts/amble/bolditalic/Amble-BoldItalic-webfont.ttf') format('truetype'), url('../fonts/amble/bolditalic/Amble-BoldItalic-webfont.svg#amblebold_italic') format('svg');
+  src: url("../fonts/amble/bolditalic/Amble-BoldItalic-webfont.eot");
+  src: url("../fonts/amble/bolditalic/Amble-BoldItalic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/amble/bolditalic/Amble-BoldItalic-webfont.woff") format("woff"), url("../fonts/amble/bolditalic/Amble-BoldItalic-webfont.ttf") format("truetype"), url("../fonts/amble/bolditalic/Amble-BoldItalic-webfont.svg#amblebold_italic") format("svg");
   font-weight: 700;
   font-style: italic; }
-
-/* line 16, C:/Users/kevin/Documents/Sites/locke/css/main.scss */
-* {
-  outline: 1px solid rgba(0, 0, 0, 0.25); }
-
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
-/* line 22, C:/Users/kevin/Documents/Sites/locke/css/main.scss */
 html {
   color: #222;
   font-size: 1em;
@@ -63,15 +53,10 @@ html {
  * These selection rule sets have to be separate.
  * Customize the background color to match your design.
  */
-/* line 36, C:/Users/kevin/Documents/Sites/locke/css/main.scss */
 ::-moz-selection {
   background: #b3d4fc;
   text-shadow: none; }
 
-/* line 41, C:/Users/kevin/Documents/Sites/locke/css/main.scss */
-::-moz-selection {
-  background: #b3d4fc;
-  text-shadow: none; }
 ::selection {
   background: #b3d4fc;
   text-shadow: none; }
@@ -79,7 +64,6 @@ html {
 /*
  * A better looking default horizontal rule
  */
-/* line 50, C:/Users/kevin/Documents/Sites/locke/css/main.scss */
 hr {
   display: block;
   height: 1px;
@@ -93,14 +77,17 @@ hr {
  * images, videos and the bottom of their containers:
  * https://github.com/h5bp/html5-boilerplate/issues/440
  */
-/* line 70, C:/Users/kevin/Documents/Sites/locke/css/main.scss */
-audio, canvas, iframe, img, svg, video {
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
   vertical-align: middle; }
 
 /*
  * Remove default fieldset styles.
  */
-/* line 78, C:/Users/kevin/Documents/Sites/locke/css/main.scss */
 fieldset {
   border: 0;
   margin: 0;
@@ -109,14 +96,12 @@ fieldset {
 /*
  * Allow only vertical resizing of textareas.
  */
-/* line 88, C:/Users/kevin/Documents/Sites/locke/css/main.scss */
 textarea {
   resize: vertical; }
 
 /* ==========================================================================
    Browser Upgrade Prompt
    ========================================================================== */
-/* line 96, C:/Users/kevin/Documents/Sites/locke/css/main.scss */
 .browserupgrade {
   margin: 0.2em 0;
   background: #ccc;
@@ -126,7 +111,34 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-/* line 106, C:/Users/kevin/Documents/Sites/locke/css/main.scss */
+/*Typography*/
+h2 {
+  font: normal 30px/36px "Libre Baskerville", Georgia, Times, "Times New Roman", serif; }
+
+p {
+  font: 300 16px/24px "Amble", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+/*Link*/
+.btn.green {
+  font: 12px/14px "Libre Baskerville", Georgia, Times, "Times New Roman", serif;
+  background: #A1B566;
+  text-decoration: none;
+  color: #fff;
+  display: inline-block;
+  width: auto;
+  position: relative;
+  padding: 14px 19px; }
+  .btn.green:before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 97%;
+    height: 86%;
+    border: 1px solid #fff; }
+  .btn.green:hover {
+    background: #82492E; }
+
 .container {
   box-sizing: border-box;
   max-width: 1024px;
@@ -134,34 +146,76 @@ textarea {
   padding: 0 20px;
   margin: 0 auto; }
 
-/* line 114, C:/Users/kevin/Documents/Sites/locke/css/main.scss */
 header {
   border-top: 10px solid #9FB664; }
-  /* line 116, C:/Users/kevin/Documents/Sites/locke/css/main.scss */
+  header .logo {
+    float: left;
+    display: block;
+    margin-top: 15px; }
+    header .logo img {
+      opacity: .6; }
   header nav {
     float: right; }
-    /* line 118, C:/Users/kevin/Documents/Sites/locke/css/main.scss */
     header nav ul {
       display: block;
       font-size: 0; }
-      /* line 121, C:/Users/kevin/Documents/Sites/locke/css/main.scss */
       header nav ul li {
         display: inline-block;
-        font: 400 16px/18px 'Libre Baskerville', Georgia, Times, 'Times New Roman', serif;
+        font: 400 16px/18px "Libre Baskerville", Georgia, Times, "Times New Roman", serif;
         text-transform: lowercase; }
-        /* line 125, C:/Users/kevin/Documents/Sites/locke/css/main.scss */
         header nav ul li a {
           text-decoration: none;
           color: #737373;
           padding: 30px 30px;
           display: block; }
-          /* line 130, C:/Users/kevin/Documents/Sites/locke/css/main.scss */
           header nav ul li a:hover {
             color: #9FB664; }
 
-/* line 142, C:/Users/kevin/Documents/Sites/locke/css/main.scss */
 #home-banner {
-  height: 660px; }
+  height: 660px;
+  width: 100%;
+  position: relative;
+  display: block;
+  overflow: hidden; }
+  #home-banner .box {
+    float: left;
+    background: #9FB664;
+    position: relative; }
+
+.container-small {
+  max-width: 710px;
+  width: 100%;
+  margin: 0 auto; }
+
+.white-text {
+  color: #fff; }
+
+section {
+  margin: 40px 0;
+  display: block; }
+
+#about-us {
+  text-align: center; }
+  #about-us h2 {
+    color: #9FB664; }
+  #about-us p {
+    color: #737373; }
+
+#our-history {
+  text-align: center;
+  background: url("../img/house-front-red.jpg") no-repeat center center;
+  background-size: cover;
+  padding: 20px 0;
+  box-shadow: inset 0 4px 7px 0 rgba(0, 0, 0, 0.2); }
+
+.gallery {
+  text-align: center; }
+  .gallery .grid .grid-item {
+    width: 50%;
+    height: 225px;
+    overflow: hidden; }
+  .gallery .grid .grid-item-width2 {
+    width: 25%; }
 
 /* ==========================================================================
    Helper classes
@@ -169,7 +223,6 @@ header {
 /*
  * Hide visually and from screen readers:
  */
-/* line 164, C:/Users/kevin/Documents/Sites/locke/css/main.scss */
 .hidden {
   display: none !important; }
 
@@ -177,7 +230,6 @@ header {
  * Hide only visually, but have it available for screen readers:
  * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
  */
-/* line 173, C:/Users/kevin/Documents/Sites/locke/css/main.scss */
 .visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -193,8 +245,8 @@ header {
  * to be focusable when navigated to via the keyboard:
  * https://www.drupal.org/node/897638
  */
-/* line 191, C:/Users/kevin/Documents/Sites/locke/css/main.scss */
-.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
   clip: auto;
   height: auto;
   margin: 0;
@@ -205,7 +257,6 @@ header {
 /*
  * Hide visually and from screen readers, but maintain layout
  */
-/* line 204, C:/Users/kevin/Documents/Sites/locke/css/main.scss */
 .invisible {
   visibility: hidden; }
 
@@ -220,14 +271,13 @@ header {
  * 2. The use of `table` rather than `block` is only necessary if using
  *    `:before` to contain the top-margins of child elements.
  */
-/* line 221, C:/Users/kevin/Documents/Sites/locke/css/main.scss */
-.clearfix:before, .clearfix:after {
+.clearfix:before,
+.clearfix:after {
   content: " ";
   /* 1 */
-  display: table
+  display: table;
   /* 2 */ }
 
-/* line 226, C:/Users/kevin/Documents/Sites/locke/css/main.scss */
 .clearfix:after {
   clear: both; }
 
@@ -236,69 +286,69 @@ header {
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */ }
+@media print, (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */ }
 /* ==========================================================================
    Print styles.
    Inlined to avoid the additional HTTP request:
    http://www.phpied.com/delay-loading-your-print-css/
    ========================================================================== */
 @media print {
-  /* line 256, C:/Users/kevin/Documents/Sites/locke/css/main.scss */
-  *, *:before, *:after {
+  *,
+  *:before,
+  *:after {
     background: transparent !important;
     color: #000 !important;
     /* Black prints faster:
-                                   http://www.sanbeiji.com/archives/953 */
+       http://www.sanbeiji.com/archives/953 */
     box-shadow: none !important;
     text-shadow: none !important; }
 
-  /* line 265, C:/Users/kevin/Documents/Sites/locke/css/main.scss */
-  a, a:visited {
+  a,
+  a:visited {
     text-decoration: underline; }
 
-  /* line 269, C:/Users/kevin/Documents/Sites/locke/css/main.scss */
   a[href]:after {
     content: " (" attr(href) ")"; }
 
-  /* line 273, C:/Users/kevin/Documents/Sites/locke/css/main.scss */
   abbr[title]:after {
     content: " (" attr(title) ")"; }
 
   /*
-     * Don't show links that are fragment identifiers,
-     * or use the `javascript:` pseudo protocol
-     */
-  /* line 283, C:/Users/kevin/Documents/Sites/locke/css/main.scss */
-  a[href^="#"]:after, a[href^="javascript:"]:after {
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
     content: ""; }
 
-  /* line 288, C:/Users/kevin/Documents/Sites/locke/css/main.scss */
-  pre, blockquote {
+  pre,
+  blockquote {
     border: 1px solid #999;
     page-break-inside: avoid; }
 
   /*
-     * Printing Tables:
-     * http://css-discuss.incutio.com/wiki/Printing_Tables
-     */
-  /* line 298, C:/Users/kevin/Documents/Sites/locke/css/main.scss */
+   * Printing Tables:
+   * http://css-discuss.incutio.com/wiki/Printing_Tables
+   */
   thead {
     display: table-header-group; }
 
-  /* line 303, C:/Users/kevin/Documents/Sites/locke/css/main.scss */
-  tr, img {
+  tr,
+  img {
     page-break-inside: avoid; }
 
-  /* line 307, C:/Users/kevin/Documents/Sites/locke/css/main.scss */
   img {
     max-width: 100% !important; }
 
-  /* line 313, C:/Users/kevin/Documents/Sites/locke/css/main.scss */
-  p, h2, h3 {
+  p,
+  h2,
+  h3 {
     orphans: 3;
     widows: 3; }
 
-  /* line 319, C:/Users/kevin/Documents/Sites/locke/css/main.scss */
-  h2, h3 {
-    page-break-after: avoid; }
- }
-/*# sourceMappingURL=main.css.map */
+  h2,
+  h3 {
+    page-break-after: avoid; } }

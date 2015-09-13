@@ -13,7 +13,7 @@
    @import 'fonts.scss';
    @import 'variable.scss';
 
-   *{outline: 1px solid rgba(0,0,0,.25);}
+  // *{outline: 1px solid rgba(0,0,0,.25);}
 
 /* ==========================================================================
    Base styles: opinionated defaults
@@ -103,6 +103,42 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+
+/*Typography*/
+
+h2{font: normal 30px/36px $libre;}
+
+p{
+    font: 300 16px/24px $amble;
+}
+
+/*Link*/
+
+.btn.green{
+    font: 12px/14px $libre;
+    background: #A1B566;
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    width: auto;
+    position: relative;
+    padding:14px 19px;
+    &:before{
+        content: '';
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        width: 97%;
+        height: 86%;
+        border: 1px solid #fff;
+    }
+
+    &:hover{
+        background: #82492E;
+    }
+}
+
+
 .container{
     box-sizing: border-box;
     max-width:1024px;
@@ -113,6 +149,14 @@ textarea {
 
 header{
     border-top: 10px solid $green;
+    
+    .logo{
+        float: left;
+        display: block;
+        margin-top: 15px;
+        img{opacity: .6;}
+    }
+
     nav{
         float: right;
         ul{
@@ -141,12 +185,65 @@ header{
 
 #home-banner{
     height: 660px;
+    width: 100%; 
+    position: relative;
+    display: block;
+    overflow: hidden;
+
+    .box{
+        float: left; 
+        background: $green;
+        position: relative;
+    }
 }
 
+.container-small{
+    max-width: 710px;
+    width: 100%;
+    margin: 0 auto;
+}
 
+.white-text{
+   color: #fff;
+}
 
+section{
+    margin: 40px 0;
+    display: block;
+}
 
+#about-us{
+    text-align: center;
+    h2{
+        color: $green;
+    }
+    p{
+        color: $gray;
+    }
 
+}
+
+#our-history{
+    text-align: center;
+    background: url('../img/house-front-red.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 20px 0;
+    box-shadow: inset 0 4px 7px 0 rgba(0,0,0,.2);
+}
+
+.gallery{
+    text-align: center;
+    .grid{
+        .grid-item{
+            width: 50%;
+            height: 225px;
+            overflow: hidden;
+        }
+        .grid-item-width2{
+            width: 25%;
+        }
+    }
+}
 
 
 
