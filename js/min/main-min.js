@@ -1,1 +1,1 @@
-$(document).ready(function(){$(".grid").isotope({itemSelector:".grid-item",layoutMode:"masonry"})});
+$(document).ready(function(){$("#tabs").responsiveTabs({startCollapsed:"accordion"}),$(".grid").isotope({itemSelector:".grid-item",layoutMode:"masonry"})});

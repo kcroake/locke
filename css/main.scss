@@ -89,6 +89,10 @@ textarea {
     resize: vertical;
 }
 
+a{
+    text-decoration: none; 
+}
+
 /* ==========================================================================
    Browser Upgrade Prompt
    ========================================================================== */
@@ -105,6 +109,10 @@ textarea {
    ========================================================================== */
 
 /*Typography*/
+
+html{
+    font: 300 100%/1.5 $amble;
+}
 
 h2{font: normal 30px/36px $libre;}
 
@@ -244,7 +252,46 @@ section{
         }
     }
 }
+// Pricing
 
+.pricing{
+    background: $darkergreen;
+    color: #fff;
+    padding: 27px 0;
+    text-align: center;
+    box-shadow: inset 0 2px 5px rgba(0,0,0,.18);
+    h2{
+        small{
+            display: block;
+            font-size: 18px;
+            font-style: italic;
+        }
+    }
+    #tabs{
+           max-width: 698px;
+           margin: 0 auto;
+        ul{
+            border-bottom: 1px solid #9EB17E;
+         
+            li{
+                margin: 0 5px;
+                padding: 10px 20px;
+                border-top: 1px solid transparent;
+                border-right: 1px solid transparent;
+                border-left: 1px solid transparent;
+                a{
+                    color: #fff;
+                    font: normal 16px/16px $libre; 
+                }
+                &.r-tabs-state-active{
+                    border-top: 1px solid #9EB17E;
+                    border-right: 1px solid #9EB17E;
+                    border-left: 1px solid #9EB17E;
+                }
+            }
+        }
+    }
+}
 
 
 
@@ -415,5 +462,41 @@ section{
     h2,
     h3 {
         page-break-after: avoid;
+    }
+}
+// JS BS
+// RESPONSIVE TABS
+.r-tabs .r-tabs-nav {
+    margin: 0;
+    padding: 0;
+}
+
+.r-tabs .r-tabs-tab {
+    display: inline-block;
+    margin: 0;
+    list-style: none;
+}
+
+.r-tabs .r-tabs-panel {
+    padding: 15px;
+    display: none;
+}
+
+.r-tabs .r-tabs-accordion-title {
+    display: none;
+}
+
+.r-tabs .r-tabs-panel.r-tabs-state-active {
+    display: block;
+}
+
+/* Accordion responsive breakpoint */
+@media only screen and (max-width: 768px) {
+    .r-tabs .r-tabs-nav {
+        display: none;
+    }
+
+    .r-tabs .r-tabs-accordion-title {
+        display: block;
     }
 }

@@ -26,6 +26,11 @@ $(document).ready(function(){
     // },function(){
     //     console.log("COMPLETE!")
     // });
+    
+    $('#tabs').responsiveTabs({
+        startCollapsed: 'accordion'
+    });
+
     $('.grid').isotope({
       // options
       itemSelector: '.grid-item',

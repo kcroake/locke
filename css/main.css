@@ -99,6 +99,9 @@ fieldset {
 textarea {
   resize: vertical; }
 
+a {
+  text-decoration: none; }
+
 /* ==========================================================================
    Browser Upgrade Prompt
    ========================================================================== */
@@ -112,6 +115,9 @@ textarea {
    Author's custom styles
    ========================================================================== */
 /*Typography*/
+html {
+  font: 300 100%/1.5 "Amble", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
 h2 {
   font: normal 30px/36px "Libre Baskerville", Georgia, Times, "Times New Roman", serif; }
 
@@ -216,6 +222,35 @@ section {
     overflow: hidden; }
   .gallery .grid .grid-item-width2 {
     width: 25%; }
+
+.pricing {
+  background: #79944D;
+  color: #fff;
+  padding: 27px 0;
+  text-align: center;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.18); }
+  .pricing h2 small {
+    display: block;
+    font-size: 18px;
+    font-style: italic; }
+  .pricing #tabs {
+    max-width: 698px;
+    margin: 0 auto; }
+    .pricing #tabs ul {
+      border-bottom: 1px solid #9EB17E; }
+      .pricing #tabs ul li {
+        margin: 0 5px;
+        padding: 10px 20px;
+        border-top: 1px solid transparent;
+        border-right: 1px solid transparent;
+        border-left: 1px solid transparent; }
+        .pricing #tabs ul li a {
+          color: #fff;
+          font: normal 16px/16px "Libre Baskerville", Georgia, Times, "Times New Roman", serif; }
+        .pricing #tabs ul li.r-tabs-state-active {
+          border-top: 1px solid #9EB17E;
+          border-right: 1px solid #9EB17E;
+          border-left: 1px solid #9EB17E; }
 
 /* ==========================================================================
    Helper classes
@@ -352,3 +387,29 @@ section {
   h2,
   h3 {
     page-break-after: avoid; } }
+.r-tabs .r-tabs-nav {
+  margin: 0;
+  padding: 0; }
+
+.r-tabs .r-tabs-tab {
+  display: inline-block;
+  margin: 0;
+  list-style: none; }
+
+.r-tabs .r-tabs-panel {
+  padding: 15px;
+  display: none; }
+
+.r-tabs .r-tabs-accordion-title {
+  display: none; }
+
+.r-tabs .r-tabs-panel.r-tabs-state-active {
+  display: block; }
+
+/* Accordion responsive breakpoint */
+@media only screen and (max-width: 768px) {
+  .r-tabs .r-tabs-nav {
+    display: none; }
+
+  .r-tabs .r-tabs-accordion-title {
+    display: block; } }
