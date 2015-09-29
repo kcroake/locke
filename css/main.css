@@ -216,12 +216,29 @@ section {
 
 .gallery {
   text-align: center; }
-  .gallery .grid .grid-item {
-    width: 50%;
-    height: 225px;
-    overflow: hidden; }
-  .gallery .grid .grid-item-width2 {
-    width: 25%; }
+  .gallery .grid {
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+    .gallery .grid:after {
+      content: '';
+      display: block;
+      clear: both; }
+    .gallery .grid .grid-item {
+      width: 50%;
+      height: 225px;
+      overflow: hidden;
+      position: relative;
+      float: left;
+      height: 0;
+      padding-bottom: 50%;
+      outline: 1px solid red; }
+    .gallery .grid .grid-item-width2 {
+      width: 25%; }
+    .gallery .grid .grid-item-height2 {
+      height: 0;
+      padding-bottom: 25%; }
 
 .pricing {
   background: #79944D;

@@ -31,9 +31,12 @@ $(document).ready(function(){
         startCollapsed: 'accordion'
     });
 
-    $('.grid').isotope({
-      // options
-      itemSelector: '.grid-item',
-      layoutMode: 'masonry' 
-    });
+  $('.grid').isotope({
+    layoutMode: 'packery',
+    itemSelector: '.grid-item',
+    packery: {
+      gutter: 0
+    }
+  });
+
 });
