@@ -1,4 +1,14 @@
+jQuery(function($){
+	
+	$('.menu-button button').on('click', function(e){
+		e.preventDefault();
+		$(this).parent().siblings('nav').toggleClass('open');
+	});
+
 $(document).ready(function(){
+	
+
+	
     //     $("#home-banner").mason({
     //     itemSelector: ".box",
     //     ratio: 1.5,
@@ -38,5 +48,7 @@ $(document).ready(function(){
       gutter: 0
     }
   });
+
+});
 
 });

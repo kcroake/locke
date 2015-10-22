@@ -23,7 +23,7 @@
 @font-face {
   font-family: 'Amble';
   src: url("../fonts/amble/lightitalic/Amble-LightItalic-webfont.eot");
-  src: url("../fonts/amble/lightitalic/Amble-LightItalic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/amble/lightitalic../fonts/amble/reg//Amble-LightItalic-webfont.woff") format("woff"), url("../fonts/amble/lightitalic/Amble-LightItalic-webfont.ttf") format("truetype"), url("../fonts/amble/lightitalic/Amble-LightItalic-webfont.svg#amblelight_italic") format("svg");
+  src: url("../fonts/amble/lightitalic/Amble-LightItalic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/amble/lightitalic//Amble-LightItalic-webfont.woff") format("woff"), url("../fonts/amble/lightitalic/Amble-LightItalic-webfont.ttf") format("truetype"), url("../fonts/amble/lightitalic/Amble-LightItalic-webfont.svg#amblelight_italic") format("svg");
   font-weight: 300;
   font-style: italic; }
 @font-face {
@@ -60,6 +60,40 @@ html {
 ::selection {
   background: #b3d4fc;
   text-shadow: none; }
+
+[role="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button {
+  box-sizing: content-box; }
+
+/* Reset `button` and button-style `input` default styles */
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button {
+  background: none;
+  border: 0;
+  color: inherit;
+  /* cursor: default; */
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  padding: 0;
+  -webkit-appearance: button;
+  /* for input */
+  -webkit-user-select: none;
+  /* for button */
+  -moz-user-select: none;
+  -ms-user-select: none; }
+
+input::-moz-focus-inner,
+button::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  outline: none; }
 
 /*
  * A better looking default horizontal rule
@@ -119,13 +153,38 @@ html {
   font: 300 100%/1.5 "Amble", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 h2 {
-  font: normal 30px/36px "Libre Baskerville", Georgia, Times, "Times New Roman", serif; }
+  font: normal 30px/36px "Libre Baskerville", Georgia, Times, "Times New Roman", serif;
+  color: #9FB664; }
+
+h4 {
+  font-family: "Libre Baskerville", Georgia, Times, "Times New Roman", serif;
+  font-size: 18px;
+  color: #A1B566;
+  line-height: 22px;
+  font-weight: normal;
+  margin-bottom: 3px;
+  margin-top: 0; }
 
 p {
-  font: 300 16px/24px "Amble", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  font: 300 16px/24px "Amble", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #737373; }
+
+p a {
+  text-decoration: underline;
+  color: #737373; }
+  p a:hover {
+    color: #9FB664; }
 
 /*Link*/
-.btn.green {
+.menu-button {
+  display: none;
+  float: right; }
+  .menu-button button {
+    margin: 18px 0 0; }
+    .menu-button button:before {
+      width: 93.5%; }
+
+button, .btn.green {
   font: 12px/14px "Libre Baskerville", Georgia, Times, "Times New Roman", serif;
   background: #A1B566;
   text-decoration: none;
@@ -133,8 +192,9 @@ p {
   display: inline-block;
   width: auto;
   position: relative;
-  padding: 14px 19px; }
-  .btn.green:before {
+  padding: 14px 19px;
+  border: none; }
+  button:before, .btn.green:before {
     content: '';
     position: absolute;
     top: 2px;
@@ -142,7 +202,7 @@ p {
     width: 97%;
     height: 86%;
     border: 1px solid #fff; }
-  .btn.green:hover {
+  button:hover, .btn.green:hover {
     background: #82492E; }
 
 .container {
@@ -153,7 +213,8 @@ p {
   margin: 0 auto; }
 
 header {
-  border-top: 10px solid #9FB664; }
+  border-top: 10px solid #9FB664;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15); }
   header .logo {
     float: left;
     display: block;
@@ -191,9 +252,11 @@ header {
 .container-small {
   max-width: 710px;
   width: 100%;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box; }
 
-.white-text {
+.white-text h2, .white-text p {
   color: #fff; }
 
 section {
@@ -217,9 +280,8 @@ section {
 .gallery {
   text-align: center; }
   .gallery .grid {
+    margin-bottom: 40px;
     width: 100%;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
     box-sizing: border-box; }
     .gallery .grid:after {
       content: '';
@@ -268,6 +330,200 @@ section {
           border-top: 1px solid #9EB17E;
           border-right: 1px solid #9EB17E;
           border-left: 1px solid #9EB17E; }
+
+.contact-us #map {
+  margin: 25px 0; }
+.contact-us .header-text {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 667px;
+  padding: 0 20px;
+  width: auto; }
+.contact-us .form-wrapper {
+  border-top: 1px solid rgba(0, 0, 0, 0.16);
+  padding: 30px 0 0;
+  margin: 30px auto; }
+  .contact-us .form-wrapper form {
+    max-width: 620px;
+    width: 66.40625%;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 0; }
+    .contact-us .form-wrapper form input, .contact-us .form-wrapper form textarea {
+      font-size: 14px; }
+    .contact-us .form-wrapper form .input-wrap {
+      width: 49%;
+      display: inline-block;
+      margin-bottom: 10px; }
+    .contact-us .form-wrapper form label {
+      font-family: "Amble", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-weight: bold;
+      font-size: 14px;
+      color: #B5B5B5;
+      text-transform: uppercase;
+      line-height: 17px; }
+    .contact-us .form-wrapper form input {
+      box-sizing: border-box;
+      width: 100%;
+      padding: 8px;
+      background: #FFFFFF;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      box-shadow: 0px 3px 0px 0px rgba(160, 181, 102, 0.23); }
+    .contact-us .form-wrapper form .input-wrap:nth-child(even) {
+      margin-left: 2%; }
+    .contact-us .form-wrapper form .text-wrap {
+      width: 99.5%;
+      margin-bottom: 10px; }
+    .contact-us .form-wrapper form textarea {
+      width: 100%;
+      background: #FFFFFF;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      box-shadow: 0px 3px 0px 0px rgba(160, 181, 102, 0.23);
+      resize: none;
+      height: 97px; }
+    .contact-us .form-wrapper form button {
+      width: 100px;
+      -webkit-appearance: none; }
+      .contact-us .form-wrapper form button:before {
+        width: 93.5%; }
+  .contact-us .form-wrapper .contact-info {
+    display: inline-block;
+    vertical-align: top;
+    width: 24.4140625%;
+    margin-left: 5.9%; }
+
+/* Rectangle 30: */
+.cta-image {
+  width: 100%;
+  height: 50vh;
+  overflow: hidden;
+  background: url(../img/house-new.jpg) no-repeat right center;
+  background-size: cover; }
+  .cta-image img {
+    margin: 0 auto;
+    display: none; }
+
+.border-bottom {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 0 20px 20px;
+  margin: 0 auto 020px;
+  box-sizing: border-box; }
+
+.temp-form {
+  max-width: 560px;
+  padding: 0 20px;
+  margin: 40px auto; }
+
+.temp-form address {
+  font-style: normal;
+  text-align: center;
+  color: #737373;
+  margin-bottom: 30px; }
+
+.temp-form address a {
+  color: #737373;
+  text-decoration: underline; }
+
+.temp-form h2 {
+  color: #A1B566;
+  text-align: center; }
+
+.wufoo ul {
+  padding: 0;
+  font-size: 0;
+  margin-left: 1%; }
+
+.wufoo ul li {
+  list-style: none;
+  margin-bottom: 15px; }
+
+.wufoo ul li span {
+  width: 49%;
+  display: inline-block; }
+
+.wufoo ul li span:nth-child(odd) {
+  margin: 0 0 0 2%; }
+
+.wufoo label {
+  display: none; }
+
+.wufoo input[type='text'],
+.wufoo input[type='email'] {
+  padding: 10px;
+  display: block;
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0px 3px 0px 0px rgba(160, 181, 102, 0.23);
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box; }
+
+.wufoo textarea {
+  resize: none;
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0px 3px 0px 0px rgba(160, 181, 102, 0.23);
+  font-size: 16px;
+  padding: 10px;
+  box-sizing: border-box;
+  width: 100%; }
+
+.wufoo input[type='submit'] {
+  background: #A1B566;
+  border: none;
+  padding: 15px 20px;
+  font-family: LibreBaskerville-Regular;
+  font-size: 11.92px;
+  color: #FFFFFF;
+  line-height: 15px;
+  display: block;
+  box-sizing: border-box;
+  width: auto;
+  margin: 0 auto; }
+
+.wufoo input[type='submit']:hover {
+  background: #79944D; }
+
+.hide {
+  display: none; }
+
+.temp-logo {
+  margin: 20px auto;
+  width: 125px;
+  display: block;
+  opacity: .8; }
+
+footer {
+  background: #946B4D;
+  font-size: 0; }
+  footer .column-one {
+    width: 48%;
+    display: inline-block; }
+    footer .column-one p {
+      font-family: "Libre Baskerville", Georgia, Times, "Times New Roman", serif;
+      font-size: 13px;
+      line-height: 17px; }
+  footer .column-two {
+    width: 48%;
+    margin-left: 4%;
+    display: inline-block; }
+    footer .column-two nav ul {
+      text-align: right;
+      padding: 0;
+      margin: 0; }
+      footer .column-two nav ul li {
+        display: inline-block; }
+        footer .column-two nav ul li:nth-child(2) {
+          border-left: 1px solid #fff;
+          margin: 0 0 0 5px;
+          padding: 0 0 0 5px; }
+        footer .column-two nav ul li a {
+          color: #fff;
+          font-family: "Libre Baskerville", Georgia, Times, "Times New Roman", serif;
+          font-size: 13px;
+          line-height: 17px; }
+          footer .column-two nav ul li a:hover {
+            text-decoration: underline; }
 
 /* ==========================================================================
    Helper classes
@@ -338,8 +594,39 @@ section {
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */ }
+@media only screen and (max-width: 800px) {
+  /* Style adjustments for viewports that meet the condition */
+  header {
+    padding: 0 0 20px; }
+    header nav {
+      opacity: 0;
+      visibility: hidden;
+      float: none;
+      position: absolute;
+      background: #9FB664;
+      top: 95px;
+      z-index: 1;
+      width: 100%;
+      left: 0;
+      -webkit-transition: all .25s ease-out .1s;
+              transition: all .25s ease-out .1s; }
+      header nav ul {
+        padding: 0; }
+        header nav ul li {
+          display: block;
+          width: 100%; }
+          header nav ul li a {
+            color: #fff;
+            padding: 10px 20px; }
+            header nav ul li a:hover {
+              color: #946B4D; }
+    header nav.open {
+      opacity: 1;
+      visibility: visible; }
+    header .logo img {
+      height: 50px; }
+    header .menu-button {
+      display: block; } }
 @media print, (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
   /* Style adjustments for high resolution devices */ }
 /* ==========================================================================
@@ -430,3 +717,5 @@ section {
 
   .r-tabs .r-tabs-accordion-title {
     display: block; } }
+
+/*# sourceMappingURL=main.css.map */

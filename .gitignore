@@ -6,3 +6,5 @@ config.codekit
 *.scssc
 
 *.scssc
+
+ftp.html

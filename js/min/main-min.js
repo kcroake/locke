@@ -1,1 +1,1 @@
-$(document).ready(function(){$("#tabs").responsiveTabs({startCollapsed:"accordion"}),$(".grid").isotope({layoutMode:"packery",itemSelector:".grid-item",packery:{gutter:0}})});
+jQuery(function($){$(".menu-button button").on("click",function(t){t.preventDefault(),$(this).parent().siblings("nav").toggleClass("open")}),$(document).ready(function(){$("#tabs").responsiveTabs({startCollapsed:"accordion"}),$(".grid").isotope({layoutMode:"packery",itemSelector:".grid-item",packery:{gutter:0}})})});
