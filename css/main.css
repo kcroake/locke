@@ -44,7 +44,11 @@
 html {
   color: #222;
   font-size: 1em;
-  line-height: 1.4; }
+  line-height: 1.4;
+  background: #946B4D; }
+
+body {
+  background: #fff; }
 
 /*
  * Remove text-shadow in selection highlight:
@@ -152,9 +156,18 @@ a {
 html {
   font: 300 100%/1.5 "Amble", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
-h2 {
+h1, h2 {
   font: normal 30px/36px "Libre Baskerville", Georgia, Times, "Times New Roman", serif;
   color: #9FB664; }
+
+h3 {
+  font-family: "Libre Baskerville", Georgia, Times, "Times New Roman", serif;
+  font-size: 20px;
+  color: #A1B566;
+  line-height: 22px;
+  font-weight: normal;
+  margin-bottom: 3px;
+  margin-top: 0; }
 
 h4 {
   font-family: "Libre Baskerville", Georgia, Times, "Times New Roman", serif;
@@ -208,7 +221,7 @@ button, .btn.green {
 .container {
   box-sizing: border-box;
   max-width: 1024px;
-  width: 100%;
+  width: auto;
   padding: 0 20px;
   margin: 0 auto; }
 
@@ -339,58 +352,109 @@ section {
   max-width: 667px;
   padding: 0 20px;
   width: auto; }
-.contact-us .form-wrapper {
+.contact-us .form-wrapper.container {
   border-top: 1px solid rgba(0, 0, 0, 0.16);
-  padding: 30px 0 0;
-  margin: 30px auto; }
-  .contact-us .form-wrapper form {
+  margin: 30px auto;
+  padding: 30px 20px 0; }
+  .contact-us .form-wrapper.container form {
     max-width: 620px;
     width: 66.40625%;
     display: inline-block;
     vertical-align: top;
     font-size: 0; }
-    .contact-us .form-wrapper form input, .contact-us .form-wrapper form textarea {
+    .contact-us .form-wrapper.container form input, .contact-us .form-wrapper.container form textarea {
       font-size: 14px; }
-    .contact-us .form-wrapper form .input-wrap {
+    .contact-us .form-wrapper.container form .input-wrap {
       width: 49%;
       display: inline-block;
       margin-bottom: 10px; }
-    .contact-us .form-wrapper form label {
+    .contact-us .form-wrapper.container form label {
       font-family: "Amble", "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-weight: bold;
       font-size: 14px;
       color: #B5B5B5;
       text-transform: uppercase;
       line-height: 17px; }
-    .contact-us .form-wrapper form input {
+    .contact-us .form-wrapper.container form input {
       box-sizing: border-box;
       width: 100%;
       padding: 8px;
       background: #FFFFFF;
       border: 1px solid rgba(0, 0, 0, 0.08);
       box-shadow: 0px 3px 0px 0px rgba(160, 181, 102, 0.23); }
-    .contact-us .form-wrapper form .input-wrap:nth-child(even) {
+    .contact-us .form-wrapper.container form .input-wrap:nth-child(even) {
       margin-left: 2%; }
-    .contact-us .form-wrapper form .text-wrap {
+    .contact-us .form-wrapper.container form .text-wrap {
       width: 99.5%;
       margin-bottom: 10px; }
-    .contact-us .form-wrapper form textarea {
+    .contact-us .form-wrapper.container form textarea {
       width: 100%;
       background: #FFFFFF;
       border: 1px solid rgba(0, 0, 0, 0.08);
       box-shadow: 0px 3px 0px 0px rgba(160, 181, 102, 0.23);
       resize: none;
       height: 97px; }
-    .contact-us .form-wrapper form button {
+    .contact-us .form-wrapper.container form button {
       width: 100px;
       -webkit-appearance: none; }
-      .contact-us .form-wrapper form button:before {
+      .contact-us .form-wrapper.container form button:before {
         width: 93.5%; }
-  .contact-us .form-wrapper .contact-info {
+  .contact-us .form-wrapper.container .contact-info {
     display: inline-block;
     vertical-align: top;
     width: 24.4140625%;
     margin-left: 5.9%; }
+
+.page-header {
+  width: auto;
+  padding: 0 20px;
+  margin-bottom: 34px; }
+  .page-header img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    max-width: 1010px; }
+
+article {
+  max-width: 620px;
+  width: 60.546875%;
+  display: inline-block;
+  vertical-align: top; }
+
+aside {
+  max-width: 300px;
+  width: 29.296875%;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  margin-left: 1.953125%; }
+  aside .promo {
+    background: #79944D;
+    box-sizing: border-box;
+    padding: 35px 23px;
+    color: #fff; }
+    aside .promo h3 {
+      color: #fff; }
+      aside .promo h3 small {
+        text-transform: uppercase;
+        font-size: 13px;
+        display: block; }
+    aside .promo p {
+      font-size: 14px;
+      line-height: 20px;
+      color: #fff; }
+    aside .promo:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+      width: 95%;
+      height: 93.5%;
+      border: 1px solid rgba(255, 255, 255, 0.4); }
 
 /* Rectangle 30: */
 .cta-image {
@@ -495,7 +559,8 @@ section {
 
 footer {
   background: #946B4D;
-  font-size: 0; }
+  font-size: 0;
+  margin: 20px 0 0; }
   footer .column-one {
     width: 48%;
     display: inline-block; }
@@ -594,6 +659,9 @@ footer {
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
+@media only screen and (max-width: 960px) {
+  header nav ul li a {
+    padding: 30px 20px; } }
 @media only screen and (max-width: 800px) {
   /* Style adjustments for viewports that meet the condition */
   header {
@@ -626,7 +694,31 @@ footer {
     header .logo img {
       height: 50px; }
     header .menu-button {
-      display: block; } }
+      display: block; }
+
+  .contact-us .form-wrapper.container form {
+    width: auto;
+    display: block;
+    margin-bottom: 30px; }
+  .contact-us .form-wrapper.container .contact-info {
+    width: auto;
+    display: block;
+    margin: 0; }
+
+  article {
+    width: auto;
+    display: block;
+    margin-bottom: 20px; }
+
+  aside {
+    width: auto;
+    display: block;
+    max-width: 100%; }
+
+  footer .column-one {
+    width: auto; }
+  footer .column-two {
+    width: auto; } }
 @media print, (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
   /* Style adjustments for high resolution devices */ }
 /* ==========================================================================
@@ -716,6 +808,17 @@ footer {
     display: none; }
 
   .r-tabs .r-tabs-accordion-title {
-    display: block; } }
+    display: block; }
+    .r-tabs .r-tabs-accordion-title a {
+      color: #fff;
+      font: normal 16px/16px "Libre Baskerville", Georgia, Times, "Times New Roman", serif;
+      border-bottom: 1px solid #fff;
+      margin-bottom: 10px;
+      padding-bottom: 10px;
+      display: inline-block; }
+
+  .r-tabs-panel button, .r-tabs-panel .btn.green {
+    margin-bottom: 10px;
+    display: inline-block; } }
 
 /*# sourceMappingURL=main.css.map */

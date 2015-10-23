@@ -1,3 +1,4 @@
+// *{outline: 1px solid rgba(0,0,0,.2);}
 /*! HTML5 Boilerplate v5.2.0 | MIT License | https://html5boilerplate.com/ */
 
 /*
@@ -23,8 +24,11 @@ html {
     color: #222;
     font-size: 1em;
     line-height: 1.4;
+    background: #946B4D;
 }
-
+body{
+	background: #fff;
+}
 /*
  * Remove text-shadow in selection highlight:
  * https://twitter.com/miketaylr/status/12228805301
@@ -156,7 +160,16 @@ html{
     font: 300 100%/1.5 $amble;
 }
 
-h2{font: normal 30px/36px $libre; color: $green;}
+h1, h2{font: normal 30px/36px $libre; color: $green;}
+h3{
+font-family: $libre;
+font-size: 20px;
+color: #A1B566;
+line-height: 22px;
+font-weight: normal;
+    margin-bottom: 3px;
+    margin-top: 0;
+}
 h4{
 font-family: $libre;
 font-size: 18px;
@@ -166,6 +179,7 @@ font-weight: normal;
     margin-bottom: 3px;
     margin-top: 0;
 }
+
 p{
     font: 300 16px/24px $amble; color: $gray;
 }
@@ -217,7 +231,7 @@ button,.btn.green{
 .container{
     box-sizing: border-box;
     max-width:1024px;
-    width: 100%; 
+    width: auto; 
     padding: 0 20px;
     margin: 0 auto;
 }
@@ -388,8 +402,8 @@ section{
 	.header-text{
 		text-align: center; margin: 0 auto; max-width: 667px; padding: 0 20px; width: auto;
 	}
-	.form-wrapper{
-		border-top: 1px solid rgba(0,0,0,0.16);padding: 30px 0 0; margin: 30px auto;
+	.form-wrapper.container{
+		border-top: 1px solid rgba(0,0,0,0.16); margin: 30px auto; padding: 30px 20px 0; 
 		
 		form{
 			max-width: 620px; width: 66.40625%; display: inline-block;vertical-align: top; font-size: 0; 
@@ -413,6 +427,44 @@ section{
 	
 }
 
+//Page Header
+
+.page-header{
+	width: auto; padding: 0 20px; margin-bottom: 34px;
+	img{
+		display: block; margin: 0 auto; width: 100%; height: auto; max-width: 1010px;
+	}
+}
+
+article{
+	max-width: 620px; width: 60.546875%; display: inline-block; vertical-align: top;
+}
+aside{
+	max-width: 300px; width: 29.296875%; display: inline-block; vertical-align: top; position: relative;margin-left: 1.953125%;
+	.promo{
+		background: $darkergreen; box-sizing: border-box; padding: 35px 23px; color: #fff; 
+		h3{color: #fff;
+			small{text-transform: uppercase; font-size: 13px; display: block;}
+			
+		}
+		p{
+			font-size: 14px;
+			line-height: 20px;
+			color: #fff;
+		}
+		&:after{
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			width: 95%;
+			height: 93.5%;
+			
+			border: 1px solid rgba(255,255,255,0.40);
+		}
+	}
+}
 
 /* Rectangle 30: */
 
@@ -478,8 +530,10 @@ box-shadow: 0px 3px 0px 0px rgba(160,181,102,0.23); font-size: 16px; padding: 10
 
 //Footer
 
-footer{background: $brown; font-size: 0;
-
+footer{
+	background: $brown;
+	font-size: 0;
+	margin: 20px 0 0;
 	.column-one{width: 48%;display: inline-block;
 		p{
 		font-family: $libre;
@@ -588,6 +642,12 @@ footer{background: $brown; font-size: 0;
    Modify as content requires.
    ========================================================================== */
 
+@media only screen and (max-width: 960px) {
+	header nav ul li a{
+		padding: 30px 20px;
+	}
+}
+
 @media only screen and (max-width: 800px) {
     /* Style adjustments for viewports that meet the condition */
     header{ 
@@ -612,6 +672,25 @@ footer{background: $brown; font-size: 0;
     .logo img{height: 50px;}
     .menu-button{display: block;}
     }
+    
+    .contact-us {
+	    .form-wrapper.container { 
+		    form{
+			    width: auto; display: block; margin-bottom: 30px;
+		    }
+		    .contact-info{
+			    width: auto; display: block; margin: 0;
+		    }
+	    }
+    }
+    article{width: auto; display: block; margin-bottom: 20px;} 
+    aside{width: auto;display: block; max-width: 100%;}
+    
+    footer{
+	    .column-one{width: auto;}
+	    .column-two{width: auto;}
+    }
+    
 }
 
 @media print,
@@ -730,6 +809,16 @@ footer{background: $brown; font-size: 0;
     }
 
     .r-tabs .r-tabs-accordion-title {
-        display: block;
+        display: block; 
+        a{
+	        color: #fff; font: normal 16px/16px "Libre Baskerville", Georgia, Times, "Times New Roman", serif;border-bottom: 1px solid #fff;  margin-bottom: 10px; padding-bottom: 10px; display: inline-block;
+        }
     }
+    
+    .r-tabs-panel{
+	    button, .btn.green{
+		    margin-bottom: 10px; display: inline-block;
+	    }
+    }
+    
 }
