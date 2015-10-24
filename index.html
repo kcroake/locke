@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title></title>
+        <title>Home</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -44,11 +44,29 @@
     </header>
 
     <section id="home-banner">
+	    <div class="grid-sizer"></div>
+	    
         <div class="box"></div>
+        <div class="box size-1"></div>
         <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
+        <div class="box headline">
+	        <h2>Headline</h2>
+	        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fermentum, nulla vitae convallis porttitor, nisl enim consequat libero, et feugiat nunc ex et enim.</p>
+        </div>
+        <div class="box size-2"></div>
+        <div class="box size-1"></div>
+        
+    </section>
+    
+    <section id="mobile-banner">
+	    <div class="img-banner">
+		    <img src="http://placehold.it/800x400"/>
+	    </div>
+	    <div class="content-banner">
+		    <h2>Headline</h2>
+	        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fermentum, nulla vitae convallis porttitor, nisl enim consequat libero, et feugiat nunc ex et enim.</p>
+	    </div>
+	    
     </section>
 
     <section id="about-us" class="container-small">
@@ -67,26 +85,31 @@
 
     <section id="home-gallery" class="gallery container">
         <h2>The Gallery</h2>
-        
+        <ul class="filter-button-group button-group">
+	        <li><button class="is-checked" data-filter="*">All</button></li>
+	        <li><button data-filter=".cat-1">Category 1</button></li>
+	        <li><button data-filter=".cat-2">Category 2</button></li>
+	        <li><button data-filter=".cat-3">Category 3</button></li>
+	        <li><button data-filter=".cat-4">Category 4</button></li>
+        </ul>
         <div class="grid clearfix">
-            <div class="grid-item"></div>
-            <div class="grid-item grid-item-width2"></div>
-            <div class="grid-item grid-item-width2"></div>
-            <div class="grid-item "></div>
-            <div class="grid-item grid-item-height2"></div>
-            <div class="grid-item grid-item-height2"></div>
-            <div class="grid-item grid-item-width2"></div>
-            <div class="grid-item grid-item-width2"></div>
-            <div class="grid-item"></div>
-            <div class="grid-item grid-item-height2"></div>
-            <div class="grid-item grid-item-height2"></div>
-            <div class="grid-item grid-item-height2"></div>
-            <div class="grid-item grid-item-height2"></div>
+            <div class="cat-1 grid-item"><a href="http://placehold.it/463x300"><img src="http://placehold.it/463x300"/></a></div>
+            <div class="cat-2 grid-item grid-item-width2"><a href="http://placehold.it/226x300"><img src="http://placehold.it/226x300"/></a></div>
+            <div class="cat-1 grid-item grid-item-width2"><a href="http://placehold.it/226x300"><img src="http://placehold.it/226x300"/></a></div>
+            <div class="cat-2 grid-item "><a href="http://placehold.it/463x300"><img src="http://placehold.it/463x300"/></div>
+            <div class="cat-4 grid-item grid-item-height2"><a href="http://placehold.it/463x150"><img src="http://placehold.it/463x150"/></a></div>
+            <div class="cat-4 grid-item grid-item-height2"><a href="http://placehold.it/463x150"><img src="http://placehold.it/463x150"/></a></div>
+            <div class="cat-2 grid-item grid-item-width2"><a href="http://placehold.it/226x300"><img src="http://placehold.it/226x300"/></a></div>
+            <div class="cat-1 grid-item grid-item-width2"><a href="http://placehold.it/226x300"><img src="http://placehold.it/226x300"/></a></div>
+             <div class="cat-1 grid-item"><a href="http://placehold.it/463x300"><img src="http://placehold.it/463x300"/></a></div>
+			<div class="cat-4 grid-item grid-item-height2"><a href="http://placehold.it/463x150"><img src="http://placehold.it/463x150"/></a></div>
+			<div class="cat-4 grid-item grid-item-height2"><a href="http://placehold.it/463x150"><img src="http://placehold.it/463x150"/></a></div>
+			<div class="cat-4 grid-item grid-item-height2"><a href="http://placehold.it/463x150"><img src="http://placehold.it/463x150"/></a></div>
          </div>
 
         <a href="" class="btn green">More From the Gallery</a>
 
-    </section>
+    </section> 
 
     <section class="pricing white-text">
         <div class="container">
@@ -137,7 +160,7 @@
 		        <div class="text-wrap">
 		        	<textarea></textarea>
 		        </div>
-		        <button>Submit</button>
+		        <button class="btn green">Submit</button>
 	        </form>
 	        <div class="contact-info">
 		        <h4>Contact Info</h4>
