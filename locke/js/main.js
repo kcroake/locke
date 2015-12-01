@@ -49,7 +49,7 @@ $(document).ready(function() {
 	// },function(){
 	//     console.log("COMPLETE!")
 	// });
-	$('#tabs').responsiveTabs({
+	$('.tabs').responsiveTabs({
 		startCollapsed: 'accordion'
 	});
 	$('#home-banner').isotope({

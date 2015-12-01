@@ -67,6 +67,52 @@
 
     <?php echo get_template_part('inc', 'gallery'); ?>
 
+    
+    <?php if(have_rows('content_fields')) : 
+	    	
+	    	$t = 1; while(have_rows('content_fields')) : the_row();
+	    	
+	    	if(get_row_layout() == 'tabs_flex') {
+    ?>
+    
+    
+     <section id="<?php print (str_replace(' ', '-', strtolower(get_sub_field('tab_title')))); ?>" class="pricing <?php if(get_sub_field('color') == 'green') { echo 'white-text'; } ?>">
+        <div class="container">
+            <h2><?php the_sub_field('tab_title'); ?><small><?php the_sub_field('sub_title'); ?></small></h2>
+            
+			<?php $c = 1; if(have_rows('tabs')) : ?>
+            <div class="tabs">
+            	
+                <ul>
+                	<?php while(have_rows('tabs')) : the_row(); 
+	                	$text = get_sub_field('tab_header');
+                	?>
+                    <li><a href="#<?php print (str_replace(' ', '-', strtolower($text))).$t; ?>"><?php the_sub_field('tab_header'); ?></a></li>
+                    <?php $c++; endwhile; ?>
+                </ul>
+                
+				<?php $d = 1; while(have_rows('tabs')) : the_row(); $text1 = get_sub_field('tab_header');?>
+                <div id="<?php print (str_replace(' ', '-', strtolower($text1))).$t;; ?>">
+                	<?php the_sub_field('tab_content'); ?>
+                	<?php if($link = the_sub_field('tab_link_one')) { ?>
+                    	<a href="<?php echo $link; ?>" class="btn green"><?php the_sub_field('tab_link_one_text'); ?></a>
+                    <?php } if($link2 = the_sub_field('tab_link_two')) { ?>
+                    	<a href="<?php echo $link2; ?>" class="btn green"><?php the_sub_field('tab_link_two_text'); ?></a>
+                    <?php } ?>
+                </div>
+                <?php $d++; endwhile; ?>
+               
+            </div>
+            <?php endif; ?>
+        </div>
+    </section>
+    
+    
+    
+    <?php } $t++; endwhile; endif; ?>
+    
+    
+<?php /*
     <section id="pricing-other-info" class="pricing white-text">
         <div class="container">
             <h2><?php the_field('pricing_headline'); ?><small><?php the_field('pricing_subhead'); ?></small></h2>
@@ -95,4 +141,8 @@
             <?php endif; ?>
         </div>
     </section>
+*/ ?>
+    
+    
+    
 <?php get_footer(); ?>

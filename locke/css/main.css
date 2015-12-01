@@ -495,24 +495,24 @@ section {
     margin-top: 10px;
     margin-bottom: 30px;
     display: block; }
-  .pricing #tabs {
+  .pricing .tabs {
     margin: 0 auto; }
-    .pricing #tabs ul {
+    .pricing .tabs ul {
       border-bottom: 1px solid #9EB17E; }
-      .pricing #tabs ul li {
+      .pricing .tabs ul li {
         margin: 0 5px;
         padding: 10px 20px;
         border-top: 1px solid transparent;
         border-right: 1px solid transparent;
         border-left: 1px solid transparent; }
-        .pricing #tabs ul li a {
+        .pricing .tabs ul li a {
           color: #fff;
           font: normal 16px/16px "Libre Baskerville", Georgia, Times, "Times New Roman", serif; }
-        .pricing #tabs ul li.r-tabs-state-active {
+        .pricing .tabs ul li.r-tabs-state-active {
           border-top: 1px solid #9EB17E;
           border-right: 1px solid #9EB17E;
           border-left: 1px solid #9EB17E; }
-    .pricing #tabs .r-tabs-panel {
+    .pricing .tabs .r-tabs-panel {
       max-width: 698px;
       margin: 0 auto; }
 
@@ -861,7 +861,7 @@ footer {
       width: 100%;
       left: 0;
       -webkit-transition: all .25s ease-out .1s;
-              transition: all .25s ease-out .1s; }
+      transition: all .25s ease-out .1s; }
       header nav ul {
         padding: 0; }
         header nav ul li {
