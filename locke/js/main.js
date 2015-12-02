@@ -49,6 +49,17 @@ $(document).ready(function() {
 	// },function(){
 	//     console.log("COMPLETE!")
 	// });
+	
+	var maxHeight = -1;
+
+    $('.column-content .column').each(function() {
+      maxHeight = maxHeight > $(this).height() ? maxHeight : $(this).height();
+    });
+
+    $('.column-content .column').each(function() {
+      $(this).height(maxHeight);
+    });
+	
 	$('.tabs').responsiveTabs({
 		startCollapsed: 'accordion'
 	});

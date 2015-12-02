@@ -107,42 +107,116 @@
         </div>
     </section>
     
+    <?php } elseif(get_row_layout() == 'column_content') { ?>
+	    
+	    <section class="column-content">
+	    	<div class="column col-left white-text">
+	    		<div class="col-wrap">
+	    			<h2><?php the_sub_field('column_title_one'); ?></h2>
+	    			<?php the_sub_field('column_content_one'); ?>
+	    		</div>
+	    	</div>
+	    	<div class="column col-right">
+	    		<div class="col-wrap">
+	    			<h2><?php the_sub_field('column_title_two'); ?></h2>
+					<?php the_sub_field('column_content_two'); ?>
+	    		</div>
+	    	</div>
+	    </section>
+    
     
     
     <?php } $t++; endwhile; endif; ?>
     
     
-<?php /*
-    <section id="pricing-other-info" class="pricing white-text">
-        <div class="container">
-            <h2><?php the_field('pricing_headline'); ?><small><?php the_field('pricing_subhead'); ?></small></h2>
-            
-			<?php $c = 1; if(have_rows('tabs')) : ?>
-            <div id="tabs">
-            	
-                <ul>
-                	<?php while(have_rows('tabs')) : the_row(); ?>
-                    <li><a href="#tab-<?php echo $c; ?>"><?php the_sub_field('tab_title'); ?></a></li>
-                    <?php $c++; endwhile; ?>
-                </ul>
-                
-				<?php $d = 1; while(have_rows('tabs')) : the_row(); ?>
-                <div id="tab-<?php echo $d; ?>">
-                	<?php the_sub_field('tab_content'); ?>
-                	<?php if($link = the_sub_field('tab_link_one')) { ?>
-                    	<a href="<?php echo $link; ?>" class="btn green"><?php the_sub_field('tab_link_one_text'); ?></a>
-                    <?php } if($link2 = the_sub_field('tab_link_two')) { ?>
-                    	<a href="<?php echo $link2; ?>" class="btn green"><?php the_sub_field('tab_link_two_text'); ?></a>
-                    <?php } ?>
-                </div>
-                <?php $d++; endwhile; ?>
-               
-            </div>
-            <?php endif; ?>
+
+    
+    	<?php if(get_field('show_contact')) { ?>    
+    
+    <section id="contact" class="contact-us">
+	    <div class="container">
+		   <div class="header-text">
+		  	 <h2>Contact Us</h2>
+		  	 <?php if(get_field('contact_content')) { ?><p><?php the_field('contact_content'); ?></p><?php } ?>
+		   </div>
+	    </div>
+        <div id="map">
+        
+        
+        <?php the_field('map_iframe'); ?>
+	         
+        </div>
+        
+        <div class="container form-wrapper">
+	       <form id="form1" name="form1" class="wufoo topLabel page" accept-charset="UTF-8" autocomplete="off" enctype="multipart/form-data" method="post" novalidate action="https://lockefallsfarm.wufoo.com/forms/zjnffcz18vzq3p/#public">
+				
+				<ul>
+					<li id="foli1" class="notranslate">
+						<label class="desc" id="title1" for="Field1">
+							Name
+						</label>
+							<span>
+								<input id="Field1" name="Field1" type="text" class="field text fn" value="" size="8" tabindex="1" placeholder="First Name" required/>
+								<label for="Field1">First</label>
+							</span>
+							<span>
+								<input id="Field2" name="Field2" type="text" class="field text ln" value="" size="14" tabindex="2" placeholder="Last Name" required/>
+								<label for="Field2">Last</label>
+							</span>
+					</li>
+					
+					<li id="foli3" class="notranslate">
+						<label class="desc" id="title3" for="Field3">
+						Email
+						</label>
+							<div>
+								<input id="Field3" name="Field3" type="email" spellcheck="false" class="field text medium" value="" maxlength="255" tabindex="3" placeholder="Email" required/>
+							</div>
+					</li>
+					
+					<li id="foli5" class="notranslate">
+					<label class="desc" id="title5" for="Field5">
+						Message
+					</label>
+					
+					<div>
+					<textarea id="Field5"
+					name="Field5"
+					class="field textarea medium"
+					spellcheck="true"
+					rows="10" cols="50"
+					placeholder="Message"
+					tabindex="4"
+					onkeyup="" required></textarea>
+					
+					</div>
+					</li> <li class="buttons ">
+					<div>
+					
+					                    <input id="saveForm" name="saveForm" class=" submit"
+					    type="submit" value="Submit"
+					 /></div>
+					</li>
+					
+					<li class="hide">
+					<label for="comment">Do Not Fill This Out</label>
+					<textarea name="comment" id="comment" rows="1" cols="1"></textarea>
+					<input type="hidden" id="idstamp" name="idstamp" value="EC/0VyoY7cg36wD7Mh815aAmDH8FCDGUjlbmp0qGmzw=" />
+					</li>
+					</ul>
+					</form>
+	        <div class="contact-info">
+		        <h4>Contact Info</h4>
+		        <p>2531 Chinook Trail<br/>
+				Wonalancet, NH 03897<br/>
+				<a href="tel:603-986-9164">603-986-9164</a><br/>
+				<a href="mailto:info@lockefallsfarm.com">info@lockefallsfarm.com</a>
+		        </p>
+		        
+	        </div>
         </div>
     </section>
-*/ ?>
     
-    
+    <?php } ?>
     
 <?php get_footer(); ?>

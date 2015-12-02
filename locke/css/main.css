@@ -448,7 +448,8 @@ section {
         color: #9FB664; }
 
 .gallery {
-  text-align: center; }
+  text-align: center;
+  margin: 40px auto; }
   .gallery .grid {
     margin-bottom: 40px;
     width: 100%;
@@ -482,11 +483,15 @@ section {
       */ }
 
 .pricing {
-  background: #79944D;
-  color: #fff;
+  margin: 0;
   padding: 27px 0;
-  text-align: center;
-  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.18); }
+  text-align: center; }
+  .pricing.white-text {
+    background: #79944D;
+    color: #fff;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.18); }
+    .pricing.white-text .tabs ul li a {
+      color: #fff; }
   .pricing h2 small {
     display: block;
     font-size: 18px;
@@ -506,8 +511,8 @@ section {
         border-right: 1px solid transparent;
         border-left: 1px solid transparent; }
         .pricing .tabs ul li a {
-          color: #fff;
-          font: normal 16px/16px "Libre Baskerville", Georgia, Times, "Times New Roman", serif; }
+          font: normal 16px/16px "Libre Baskerville", Georgia, Times, "Times New Roman", serif;
+          color: #9FB664; }
         .pricing .tabs ul li.r-tabs-state-active {
           border-top: 1px solid #9EB17E;
           border-right: 1px solid #9EB17E;
@@ -515,6 +520,32 @@ section {
     .pricing .tabs .r-tabs-panel {
       max-width: 698px;
       margin: 0 auto; }
+
+.column-content {
+  position: relative;
+  font-size: 0;
+  width: 100%; }
+  .column-content .column {
+    display: inline-block;
+    width: 50%;
+    vertical-align: top;
+    padding: 20px 0; }
+    .column-content .column .col-wrap {
+      padding: 0 20px;
+      max-width: 400px;
+      width: 100%;
+      margin: 0 auto;
+      text-align: center;
+      box-sizing: border-box; }
+    .column-content .column.col-left {
+      background: #79944D;
+      color: #fff; }
+      .column-content .column.col-left h2 {
+        color: #fff; }
+      .column-content .column.col-left p {
+        color: #fff; }
+    .column-content .column.col-right {
+      background: #f8f8f8; }
 
 .contact-us #map {
   margin: 25px 0; }
@@ -926,7 +957,14 @@ footer {
   .gallery .grid .grid-item .mobile {
     display: block;
     width: 100%;
-    height: auto; } }
+    height: auto; }
+
+  .column-content .column {
+    height: 100% !important;
+    display: block;
+    width: auto;
+    padding: 20px;
+    box-sizing: border-box; } }
 @media print, (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
   /* Style adjustments for high resolution devices */ }
 /* ==========================================================================
@@ -1018,9 +1056,7 @@ footer {
   .r-tabs .r-tabs-accordion-title {
     display: block; }
     .r-tabs .r-tabs-accordion-title a {
-      color: #fff;
       font: normal 16px/16px "Libre Baskerville", Georgia, Times, "Times New Roman", serif;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.35);
       margin-bottom: 18px;
       padding-bottom: 20px;
       display: block; }
@@ -1033,9 +1069,19 @@ footer {
     .r-tabs .r-tabs-accordion-title.r-tabs-state-active a:after {
       content: 'g'; }
 
-  .r-tabs-panel button, .r-tabs-panel .btn.green {
-    margin-bottom: 10px;
-    display: inline-block; } }
+  .r-tabs-panel {
+    padding: 0; }
+    .r-tabs-panel button, .r-tabs-panel .btn.green {
+      margin-bottom: 10px;
+      display: inline-block; }
+
+  .r-tabs .r-tabs-accordion-title a {
+    color: #9FB664;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.09); }
+
+  .white-text .r-tabs .r-tabs-accordion-title a {
+    color: #fff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.35); } }
 /* Magnific Popup CSS */
 .mfp-bg {
   top: 0;
