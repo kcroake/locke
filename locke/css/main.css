@@ -215,7 +215,8 @@ html {
 
 h1, h2 {
   font: normal 30px/36px "Libre Baskerville", Georgia, Times, "Times New Roman", serif;
-  color: #9FB664; }
+  color: #9FB664;
+  margin: 10px 0 15px; }
 
 h3 {
   font-family: "Libre Baskerville", Georgia, Times, "Times New Roman", serif;
@@ -313,7 +314,8 @@ header {
       header nav ul li {
         display: inline-block;
         font: 400 16px/18px "Libre Baskerville", Georgia, Times, "Times New Roman", serif;
-        text-transform: lowercase; }
+        text-transform: lowercase;
+        position: relative; }
         header nav ul li a {
           text-decoration: none;
           color: #737373;
@@ -321,6 +323,24 @@ header {
           display: block; }
           header nav ul li a:hover {
             color: #9FB664; }
+        header nav ul li ul {
+          display: none;
+          position: absolute;
+          top: 78px;
+          left: 20px;
+          background: #79944D;
+          z-index: 9999; }
+          header nav ul li ul li {
+            display: block; }
+            header nav ul li ul li a {
+              color: #fff;
+              padding: 10px 15px; }
+            header nav ul li ul li:hover {
+              background: #62793C; }
+              header nav ul li ul li:hover a {
+                color: #fff; }
+        header nav ul li:hover ul {
+          display: block; }
 
 #home-banner {
   height: 648px;
@@ -361,6 +381,10 @@ header {
     #home-banner .box.headline {
       padding: 15px 40px;
       box-sizing: border-box; }
+      #home-banner .box.headline img {
+        width: 100%;
+        height: auto;
+        max-width: 100%; }
       #home-banner .box.headline h2 {
         color: #fff;
         margin-bottom: 18px; }
@@ -396,7 +420,7 @@ header {
   max-width: 710px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 20px 20px 0;
   box-sizing: border-box; }
 
 .white-text h2, .white-text p {
@@ -529,7 +553,7 @@ section {
     display: inline-block;
     width: 50%;
     vertical-align: top;
-    padding: 20px 0; }
+    padding: 40px 0; }
     .column-content .column .col-wrap {
       padding: 0 20px;
       max-width: 400px;
@@ -659,7 +683,16 @@ aside {
       height: 93.5%;
       border: 1px solid rgba(255, 255, 255, 0.4); }
 
+#locke-cal {
+  padding: 40px 0; }
+
 /* Rectangle 30: */
+.fc-time {
+  display: none; }
+
+.fc-right {
+  display: none; }
+
 .cta-image {
   width: 100%;
   height: 50vh;
@@ -710,6 +743,16 @@ aside {
 
 .wufoo ul li span:nth-child(odd) {
   margin: 0 0 0 2%; }
+
+.wufoo ul li#foli8 span {
+  width: 30%;
+  margin: 0 0 0 2%; }
+
+.wufoo ul li#foli8 span.month {
+  margin: 0; }
+
+#pick8 {
+  float: right; }
 
 .wufoo label {
   display: none; }
@@ -800,6 +843,23 @@ footer {
           line-height: 17px; }
           footer .column-two nav ul li a:hover {
             text-decoration: underline; }
+
+#locke-cal .fc-toolbar {
+  margin-bottom: 35px !important; }
+
+#locke-cal .fc-today-button {
+  display: none !important; }
+
+#locke-cal .wpfc-calendar-wrapper h2 {
+  font-size: 20px !important; }
+
+#locke-cal .fc-toolbar .fc-center {
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+      transform: translateX(-50%); }
 
 /* ==========================================================================
    Helper classes
@@ -892,12 +952,19 @@ footer {
       width: 100%;
       left: 0;
       -webkit-transition: all .25s ease-out .1s;
-      transition: all .25s ease-out .1s; }
+      transition: all .25s ease-out .1s;
+      z-index: 9999; }
       header nav ul {
         padding: 0; }
         header nav ul li {
           display: block;
           width: 100%; }
+          header nav ul li ul {
+            display: block;
+            position: static; }
+            header nav ul li ul li a {
+              font-size: 14px;
+              padding: 10px 15px 10px 28px; }
           header nav ul li a {
             color: #fff;
             padding: 10px 20px; }
