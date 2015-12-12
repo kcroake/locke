@@ -142,6 +142,7 @@ function enqueue_scripts() {
     wp_enqueue_script('jquery', get_stylesheet_directory_uri().'/js/vendor/jquery-1.11.3.min.js', array(), null);
     wp_enqueue_script('plugins', get_stylesheet_directory_uri().'/js/plugins.js', array('jquery'), null, true);
     wp_enqueue_script('init', get_stylesheet_directory_uri().'/js/main.js', array('jquery', 'plugins'), null, true);
+        wp_enqueue_script('init', get_stylesheet_directory_uri().'/js/wufoo/wufoo.js', array('jquery'), null, true);
 }
 add_action('wp_enqueue_scripts', 'enqueue_scripts');
     

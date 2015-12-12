@@ -163,7 +163,7 @@ html{
     font: 300 100%/1.5 $amble;
 }
 
-h1, h2{font: normal 30px/36px $libre; color: $green;}
+h1, h2{font: normal 30px/36px $libre; color: $green; margin: 10px 0 15px;}
 h3{
 font-family: $libre;
 font-size: 20px;
@@ -274,6 +274,7 @@ header{
                 display: inline-block;
                 font: 400 16px/18px $libre;
                 text-transform: lowercase;
+                position: relative;
                 a{
                     text-decoration:none;
                     color: $gray;
@@ -283,6 +284,35 @@ header{
                         color: $green;
                     }
                 }
+                
+                ul{
+	                display: none;
+	                position: absolute;
+	                top: 78px;
+	                left: 20px;
+	                background: $darkergreen;
+	                z-index: 9999;
+	                li{
+		                display: block;
+		                a{
+			                color: #fff;
+			                padding: 10px 15px;
+		                }
+		                
+		                &:hover{
+				           background: #62793C;
+				            a{
+					            color: #fff;
+				            }
+			            }
+		                
+	                }
+                }
+                
+                &:hover{
+	               ul{ display: block;}
+                }
+                
             }
         }
     }
@@ -322,6 +352,7 @@ header{
         &.size-5{   /*max-width: 615px;  height: 238px; display: block; width: 23%; /*width: 41.708333333%; height: 100%; padding-bottom: 34.834609495%;*/}
         &.size-6{   /*max-width: 374px;  height: 456px; display: block; width: 23%; /*width: 24.972222222%; height: 100%; padding-bottom: 68.831546708%;*/}
         &.headline{padding: 15px 40px; box-sizing: border-box;
+	        img{width: 100%; height: auto; max-width: 100%;}
 	        h2{color: #fff; margin-bottom: 18px;}
 	        p{font-style: italic; font-family: $libre; font-weight: normal; color: #fff;}
         }
@@ -358,7 +389,7 @@ header{
     max-width: 710px;
     width: 100%;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 20px 20px 0;
     box-sizing: border-box;
 }
 
@@ -506,7 +537,7 @@ section{
 
 .column-content{
 	position: relative; font-size: 0; width: 100%;
-	.column{display: inline-block; width: 50%; vertical-align: top;padding: 20px 0;
+	.column{display: inline-block; width: 50%; vertical-align: top;padding: 40px 0;
 		.col-wrap{padding: 0 20px; max-width: 400px; width: 100%; margin: 0 auto; text-align: center;  box-sizing: border-box;}
 		&.col-left{background: $darkergreen; color: #fff;
 			h2{color: #fff;}
@@ -587,8 +618,18 @@ aside{
 	}
 }
 
-/* Rectangle 30: */
+#locke-cal{
+	padding: 40px 0;
+}
 
+/* Rectangle 30: */
+.fc-time{
+	display: none;
+}
+
+.fc-right{
+	display: none;
+}
 //Temp Stuff. 
 
 .cta-image{
@@ -613,7 +654,12 @@ aside{
 .wufoo ul{padding: 0; font-size: 0; margin-left: 1%;}
 .wufoo ul li{list-style: none; margin-bottom: 15px;}
 .wufoo ul li span{ width: 49%; display: inline-block;}
+
 .wufoo ul li span:nth-child(odd){margin: 0 0 0 2%;}
+.wufoo ul li#foli8 span{width: 30%;margin: 0 0 0 2%;}
+.wufoo ul li#foli8 span.month{margin: 0;}
+
+#pick8{float: right}
 .wufoo label{display: none;}
 .wufoo input[type='text'],
 .wufoo input[type='email']{padding: 10px; display: block; background: #FFFFFF; border: 1px solid rgba(0,0,0,0.08); box-shadow: 0px 3px 0px 0px rgba(160,181,102,0.23); font-size: 16px;width: 100%;box-sizing: border-box;}
@@ -691,6 +737,29 @@ footer{
 		}
 	}
 }
+
+#locke-cal .fc-toolbar{
+	margin-bottom: 35px !important;
+}
+
+#locke-cal .fc-today-button{
+	display: none !important;
+}
+
+#locke-cal .wpfc-calendar-wrapper h2{
+	font-size: 20px !important;
+}
+
+#locke-cal .fc-toolbar .fc-center{
+	display: inline-block;
+	position: absolute;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	transform: translateX(-50%);
+}
+
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
@@ -797,8 +866,19 @@ footer{
 			width: 100%;
 			left: 0;
 			transition: all .25s ease-out .1s;
+			z-index: 9999;
 		    ul{padding: 0; 
 			    li{display: block; width: 100%;
+				    ul{
+					    display: block;
+					    position: static;
+					    li{
+						    a{
+							    font-size: 14px;
+							    padding: 10px 15px 10px 28px;
+						    }
+					    }
+				    }
 				    a{color: #fff;    padding: 10px 20px;
 					    &:hover{
 						    color: $brown;
