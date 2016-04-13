@@ -41,6 +41,7 @@ add_image_size( 'long', 463, 150, true);
 add_image_size('inner-banner',1010, 175, true);
 add_image_size('mobile-banner',800, 400, true);
 add_image_size('mobile-gallery',710, 980, true);
+add_image_size( 'new-gal', 264, 237, true);
 //add_image_size( 'size-name', 100, 100, true);
 
 /* Declare Nav Menu Areas */
@@ -48,12 +49,19 @@ if ( function_exists( 'register_nav_menus' ) ) {
 	register_nav_menus(
 		array(
                'main-menu' => 'Main Menu',
+               'main-menu-inner' => 'Main Menu Inner',
                'footer-menu' => 'Footer Menu'
 		)
 	);
 }
 
-
+function my_fc_filter( $events ){
+  foreach($events as $key => $event){
+    unset($events[$key]['url']);
+  }
+  return $events;
+}
+add_filter('wpfc_events','my_fc_filter');
 /* Add a Stylesheet for Admin Content Area */
 /*
 function admin_font_setup(){

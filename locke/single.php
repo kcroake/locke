@@ -38,6 +38,8 @@
 		    		<a href="<?php echo $img['url']; ?>">
 		    			<img src="<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>"/>
 		    		</a>
+		    		
+		    		<?php endwhile; endif; ?>
 		    	</div>
 		    <?php } ?>
 		    <?php endwhile; ?>

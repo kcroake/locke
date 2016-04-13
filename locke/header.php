@@ -30,15 +30,27 @@
                 <div class="menu-button">
 	                <button>&#9776; Menu</button>
                 </div>
+                
+                <?php if(is_front_page()) { ?>
+                
                 <?php 
 	                $mainArgs = array(
 		                'theme_location' => 'main-menu',
 		                'menu' => '',
 		                'container' => 'nav',
-		                'depth' => 1
+		                'depth' => 2
 	                ); 
 	                wp_nav_menu($mainArgs); ?>
-
+				<?php } else { ?>
+				   <?php 
+	                $mainArgs2 = array(
+		                'theme_location' => 'main-menu-inner',
+		                'menu' => '',
+		                'container' => 'nav',
+		                'depth' => 2
+	                ); 
+	                wp_nav_menu($mainArgs2); ?>
+				<?php } ?>
             </div>
         
     </header>
